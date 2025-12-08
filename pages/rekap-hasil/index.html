@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     :root {
-        --primary: #001F3F; --accent: #D4AF37; --bg: #F5F5DC; --text: #0F172A;
+        --primary: #001F3F; --accent: #D4AF37; --bg: #F5F5DC; --text: #0F172A; --muted: #64748b;
         --card-bg: rgba(255, 255, 255, 0.95); --border: 1px solid rgba(0,31,63,0.1);
     }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin:0; padding-bottom: 2rem; }
@@ -16,34 +16,42 @@
     
     .nav-bar { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem; }
     .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--primary); font-weight: 600; padding: 0.5rem 1rem; background: white; border-radius: 50px; border: var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: 0.2s; }
-    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateX(-2px); }
 
     .header { text-align: center; margin-bottom: 2rem; }
     .header h1 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .header p { color: var(--muted); margin-bottom: 0.5rem; }
+    .teacher-badge { display: inline-block; background: rgba(0, 31, 63, 0.05); color: var(--primary); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; border: 1px solid rgba(0,31,63,0.1); }
 
     .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; max-width: 1000px; margin: 0 auto 2rem; padding: 0 1rem; }
     .stat-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: var(--border); text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     .stat-val { font-size: 1.6rem; font-weight: 700; color: var(--primary); display: block; }
-    .stat-lbl { font-size: 0.8rem; color: #64748b; text-transform: uppercase; }
+    .stat-lbl { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
 
     .table-container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
     .table-box { background: white; border-radius: 12px; overflow-x: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: var(--border); }
     table { width: 100%; border-collapse: collapse; min-width: 700px; }
     thead { background: var(--primary); color: white; }
-    th { padding: 1rem; text-align: center; font-size: 0.85rem; }
-    td { padding: 1rem; border-bottom: 1px solid #eee; text-align: center; }
+    th { padding: 1rem; text-align: center; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    td { padding: 1rem; border-bottom: 1px solid #eee; text-align: center; font-size: 0.95rem; }
     tr:last-child { font-weight: 700; background: rgba(212, 175, 55, 0.1); }
+    tr:hover td { background-color: rgba(212, 175, 55, 0.05); }
     
-    .badge-class { background: var(--accent); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+    .badge-class { background: var(--accent); color: white; padding: 4px 10px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="bg-pattern"></div>
-<div class="nav-bar"><a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to PTS Dashboard</a></div>
+<div class="nav-bar">
+    <a href="https://azhibnmjkfr.github.io/rekap-data-pts-ganjil/" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to PTS Dashboard
+    </a>
+</div>
 
 <div class="header">
     <h1>Rekap Hasil PTS</h1>
     <p>Executive Summary Semester Ganjil 2025</p>
+    <div class="teacher-badge"><i class="fas fa-user-tie"></i> Guru Pengampu: Ahmad Zaman Huri, S.Pd.</div>
 </div>
 
 <div class="stats">
